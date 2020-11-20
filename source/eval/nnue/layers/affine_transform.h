@@ -436,7 +436,7 @@ class AffineTransform {
     {
       // This case can never happen because kOutputDimensions
       // is always 1 or a multiple of kSimdWidth.
-      assert(false);
+      ASSERT_LV3(false);
     }
 
 #elif defined (USE_AVX2)
@@ -502,7 +502,7 @@ class AffineTransform {
     {
       // This case can never happen because kOutputDimensions
       // is always 1 or a multiple of kSimdWidth.
-      assert(false);
+      ASSERT_LV3(false);
     }
 
 #elif defined (USE_SSSE3)
@@ -568,7 +568,7 @@ class AffineTransform {
     {
       // This case can never happen because kOutputDimensions
       // is always 1 or a multiple of kSimdWidth.
-      assert(false);
+      ASSERT_LV3(false);
     }
 
 #else
