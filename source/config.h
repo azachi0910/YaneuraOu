@@ -291,8 +291,7 @@ constexpr int MAX_PLY_NUM = 246;
 // 探索部は通常のやねうら王エンジンを用いる。
 #define YANEURAOU_ENGINE
 
-// EvalHashを用いるのは3駒型のみ。それ以外は差分計算用の状態が大きすぎてhitしたところでどうしようもない。
-#if defined(YANEURAOU_ENGINE_KPPT) || defined(YANEURAOU_ENGINE_KPP_KKPT)
+#if defined(YANEURAOU_ENGINE_KPPT) || defined(YANEURAOU_ENGINE_KPP_KKPT) || defined(YANEURAOU_ENGINE_NNUE)
 #define USE_EVAL_HASH
 #endif
 
