@@ -1733,7 +1733,7 @@ namespace {
 			Depth R = ((PARAM_NULL_MOVE_DYNAMIC_ALPHA/*982*/ + PARAM_NULL_MOVE_DYNAMIC_BETA/*85*/ * depth) / 256
 				+ std::min(int(eval - beta) / PARAM_NULL_MOVE_DYNAMIC_GAMMA/*192*/, 3));
 
-			ss->currentMove = MOVE_NONE;
+			ss->currentMove = MOVE_NULL;
 			// null moveなので、王手はかかっていなくて駒取りでもない。
 			// よって、continuationHistory[0(王手かかってない)][0(駒取りではない)][SQ_ZERO][NO_PIECE]
 			ss->continuationHistory = &thisThread->continuationHistory[0][0][SQ_ZERO][NO_PIECE];
